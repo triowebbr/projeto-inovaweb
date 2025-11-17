@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+  <meta charset="UTF-8">
+  <title>Desenvolvedores</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="imagens/icon2.png" type="image/x-icon">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ovo&family=Quattrocento:wght@400;700&display=swap');
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Quattrocento', serif;
+      font-size: 19px;
+      color: #111827;
+      padding-top: 100px; /* espaço para header fixo */
+      background: #f9f9f9;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Ovo', serif;
+      font-size: 35px;
+      font-weight: bold;
+      color: #111827;
+      padding: 10px 0 25px;
+      text-align: center;
+    }
+
+    p {
+      line-height: 1.8;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    /* Header */
+    .site-header {
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #0066cc;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .site-nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .site-nav ul li {
+      margin-left: 20px;
+    }
+
+    .site-nav ul li a {
+      text-decoration: none;
+      color: #111827;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .site-nav ul li a:hover {
+      color: #0066cc;
+    }
+
+    .site-nav ul li a.btn-orcamento {
+      border: 2px solid #333;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .site-nav ul li a.btn-orcamento:hover {
+      background: #333;
+      color: #fff;
+    }
+
+    /* Seção desenvolvedores */
+    .developers-section {
+      padding: 60px 0;
+    }
+
+    .developer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .developer img {
+      width: 200px;        /* largura fixa */
+      height: 200px;       /* altura fixa */
+      border-radius: 50%;  /* transforma em círculo */
+      object-fit: cover;   /* mantém proporção e corta excesso */
+      margin-bottom: 20px;
+    }
+
+    .developer-text {
+      max-width: 800px;
+      text-align: justify;
+    }
+
+    /* Footer */
+  .site-footer {
+  background: #222;
+  color: #ddd;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centraliza horizontalmente */
+  justify-content: center; /* centraliza verticalmente */
+  text-align: center;
+}
+
+.btn-footer {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 8px;
+  color: #bbb;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.btn-footer:hover {
+  color: #fff;
+}
+
+
+    @media (min-width: 768px) {
+      .developer {
+        flex-direction: row;
+        gap: 40px;
+      }
+      .developer:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+      .developer-text {
+        text-align: left;
+      }
+    }
+  </style>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
+<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
+<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="inovaweb.html" class="logo">
+        <img src="imagens/icon2.png" alt="Logo InovaWeb" class="logo-icon">
+        InovaWeb
+      </a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="inovaweb.html#servicos">Serviços</a></li>
+          <li><a href="inovaweb.html#sobre">Sobre</a></li>
+          <li><a href="inovaweb.html#contato">Contato</a></li>
+          <li><a href="orcamento.html" target="_blank" class="btn-orcamento">Orçamento Gratuito</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Seção Desenvolvedores -->
+  <section class="developers-section container">
+    <h2>Nossa História</h2>
+
+    <!-- Desenvolvedor 1 -->
+    <div class="developer">
+      <img src="imagens/Ruana.jpg" alt="Desenvolvedor 1">
+      <div class="developer-text">
+        <p>
+          Meu nome é Ruana de Rossi Vieira, sou formada em Gestão de TI e atualmente estudo programação front-end no SENAC. Tenho interesse especial em HTML, CSS e JavaScript, linguagens que me permitem transformar ideias em soluções digitais criativas e funcionais.
+      </div>
+    </div>
+
+    <!-- Desenvolvedor 2 -->
+    <div class="developer">
+      <img src="imagens/Leandro.jpg" alt="Desenvolvedor 2">
+      <div class="developer-text">
+        <p>
+Meu nome é Leandro dos Santos Cunha, moro em Sumidouro-RJ, estudo programação e estou atualmente no curso de front-end no SENAC e estou tendo resultados positivos com a IA. Gosto das linguagens de HTML,  CSS e Javascript.        </p>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <p>&copy; 2025 InovaWeb - Todos os direitos reservados.</p>
+  <a href="inovaweb.html" class="btn-footer">Voltar ao Site</a>
+</footer>
+
+
+</body>
+</html>

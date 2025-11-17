@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+  <meta charset="UTF-8">
+  <title>Desenvolvimento</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="imagens/icon2.png" type="image/x-icon">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ovo&family=Quattrocento:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+      font-family: 'Quattrocento', serif;
+      font-size: 19px;
+      color: #111827;
+    }
+
+    /* Canvas de partículas */
+    #particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background: linear-gradient(135deg, #0a0f29, #1e3a8a);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Header */
+    .site-header {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .logo a:hover { color: #004499; }
+
+    .logo-icon { width: 40px; height: 40px; }
+
+    .site-nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .site-nav ul li { margin-left: 20px; }
+    .site-nav ul li a { text-decoration: none; color: #111827; font-weight: 500; transition: color 0.3s ease; }
+    .site-nav ul li a:hover { color: #0066cc; }
+
+    /* Container e conteúdo */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-top: 120px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .conteudo {
+      background: rgba(255,255,255,0.97);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease;
+      max-width: 100%;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-family: 'Ovo', serif;
+      font-size: 42px;
+      margin-bottom: 20px;
+      color: #0066cc;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Ovo', serif;
+      font-size: 28px;
+      margin: 30px 0 15px;
+      color: #111827;
+    }
+
+    p { margin-bottom: 15px; line-height: 1.6; color: #333; }
+
+    /* Footer corrigido */
+    .site-footer {
+      width: 100%;
+      background: #0b1b3d;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0;
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      position: relative;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.4);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .header-container { flex-direction: column; gap: 15px; }
+      .site-nav ul { flex-direction: column; gap: 10px; }
+      h1 { font-size: 32px; }
+      h2 { font-size: 22px; }
+      .conteudo { padding: 25px; }
+    }
+  </style>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
+<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
+<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+
+  <!-- Partículas -->
+  <canvas id="particles"></canvas>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="imagens/icon2.png" alt="Logo InovaWeb" class="logo-icon">
+        <a href="inovaweb.html">InovaWeb</a>
+      </div>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="inovaweb.html">Início</a></li>
+          <li><a href="desenvolvimento.html" class="active">Desenvolvimento Web</a></li>
+          <li><a href="inovaweb.html#contato">Fale Conosco</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo -->
+  <main class="container">
+    <div class="conteudo">
+      <h1>Desenvolvimento Web</h1>
+      <p>Na <strong>InovaWeb</strong>, desenvolvemos <strong>sites modernos, responsivos e otimizados para performance</strong>, garantindo a melhor experiência para seus usuários e mais resultados para seu negócio.</p>
+
+      <h2>Por que escolher nossos serviços?</h2>
+      <p>✔ Design moderno e responsivo para qualquer dispositivo.</p>
+      <p>✔ Sites rápidos e otimizados para SEO.</p>
+      <p>✔ Integração com redes sociais e ferramentas de marketing.</p>
+      <p>✔ Painel administrativo para fácil gerenciamento.</p>
+
+      <h2>Tecnologias Utilizadas</h2>
+      <p>HTML5, CSS3, JavaScript, frameworks modernos e integrações com APIs.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 InovaWeb - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Script Partículas -->
+  <script>
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let particlesArray;
+    let w = canvas.width = window.innerWidth;
+    let h = canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', function(){
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+      initParticles();
+    });
+
+    class Particle {
+      constructor(){
+        this.x = Math.random() * w;
+        this.y = Math.random() * h;
+        this.size = Math.random() * 3 + 1;
+        this.speedX = Math.random() * 1 - 0.5;
+        this.speedY = Math.random() * 1 - 0.5;
+      }
+      update(){
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if(this.x < 0 || this.x > w) this.speedX *= -1;
+        if(this.y < 0 || this.y > h) this.speedY *= -1;
+      }
+      draw(){
+        ctx.fillStyle = 'rgba(0,255,255,0.7)';
+        ctx.beginPath();
+        ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+        ctx.fill();
+      }
+    }
+
+    function initParticles(){
+      particlesArray = [];
+      for(let i=0; i<100; i++){
+        particlesArray.push(new Particle());
+      }
+    }
+
+    function animate(){
+      ctx.clearRect(0,0,w,h);
+      particlesArray.forEach(p => { p.update(); p.draw(); });
+      connectParticles();
+      requestAnimationFrame(animate);
+    }
+
+    function connectParticles(){
+      for(let a=0; a<particlesArray.length; a++){
+        for(let b=a; b<particlesArray.length; b++){
+          let dx = particlesArray[a].x - particlesArray[b].x;
+          let dy = particlesArray[a].y - particlesArray[b].y;
+          let distance = Math.sqrt(dx*dx + dy*dy);
+          if(distance < 120){
+            ctx.strokeStyle = 'rgba(0,255,255,0.1)';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(particlesArray[a].x,particlesArray[a].y);
+            ctx.lineTo(particlesArray[b].x,particlesArray[b].y);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    initParticles();
+    animate();
+  </script>
+
+</body>
+</html>

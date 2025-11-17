@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+  <meta charset="UTF-8">
+  <title>InovaWeb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="imagens/icon2.png" type="image/x-icon">
+  <link rel="stylesheet" href="style/style.css">
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
+<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
+<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+  <!-- Header -->
+<header class="site-header">
+  <div class="container header-container">
+    <a href="#" class="logo">
+      <img src="imagens/icon2.png" alt="Logo InovaWeb" class="logo-icon">
+      InovaWeb
+    </a>
+
+    <nav class="site-nav" id="site-nav">
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="orcamento.html" target="_blank" class="btn-orcamento">Orçamento Gratuito</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botão Hamburguer -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+      ☰
+    </button>
+  </div>
+</header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Transformamos tecnologia em resultados</h1>
+      <p>Desenvolvimento Web, Automação, Consultoria Digital e Inteligência Artificial.</p>
+      <a href="#servicos" class="btn-primary">Nossos Serviços</a>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <h2>Sobre a InovaWeb</h2>
+      <p>
+        Na InovaWeb, transformamos negócios com tecnologia e inovação.
+        Criamos soluções digitais inteligentes que geram resultados, otimizam processos e destacam sua marca no mercado.
+        Mais do que tecnologia, entregamos eficiência, crescimento e presença online de impacto — para que você possa focar no que realmente importa: fazer seu negócio crescer e conquistar seus clientes.
+        Transforme sua empresa. Eleve sua presença digital.
+      </p>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+<section id="servicos" class="section bg-light">
+  <div class="container">
+    <h2>Nossos Serviços</h2>
+    <div class="grid-4">
+      <a href="desenvolvimento.html" style="text-decoration:none; color:inherit;">
+        <div class="card">
+          <img src="imagens/web.png" alt="Desenvolvimento Web">
+          <h3>Desenvolvimento Web</h3>
+          <p>Sites modernos, responsivos e otimizados para performance.</p>
+        </div>
+      </a>
+
+      <a href="automacao.html" style="text-decoration:none; color:inherit;">
+        <div class="card">
+          <img src="imagens/automação.png" alt="Automação">
+          <h3>Automação de Processos</h3>
+          <p>Elimine tarefas repetitivas e torne sua empresa mais ágil.</p>
+        </div>
+      </a>
+
+      <a href="consultoria.html" style="text-decoration:none; color:inherit;">
+        <div class="card">
+          <img src="imagens/consultoria.png" alt="Consultoria">
+          <h3>Consultoria Digital</h3>
+          <p>Adote as melhores práticas digitais e aumente sua presença online.</p>
+        </div>
+      </a>
+
+      <a href="ia.html" style="text-decoration:none; color:inherit;">
+        <div class="card">
+          <img src="imagens/IA.png" alt="Inteligência Artificial">
+          <h3>Inteligência Artificial</h3>
+          <p>Soluções personalizadas de IA para análise e otimização.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- Planos -->
+  <section id="planos" class="section">
+    <div class="container">
+      <h2>Planos & Preços</h2>
+      <div class="grid-3">
+        <div class="plano">
+          <h3>Essencial</h3>
+          <p>Site moderno + suporte inicial.</p>
+          <span class="preco">R$ 1.500/mês</span>
+          <a href="#contato" class="btn-secondary">Contratar</a>
+        </div>
+        <div class="plano destaque">
+          <h3>Pro</h3>
+          <p>Web + Automação + Consultoria Digital.</p>
+          <span class="preco">R$ 3.500/mês</span>
+          <a href="#contato" class="btn-secondary">Contratar</a>
+        </div>
+        <div class="plano">
+          <h3>Avançado</h3>
+          <p>Pacote completo com IA integrada.</p>
+          <span class="preco">R$ 5.000/mês</span>
+          <a href="#contato" class="btn-secondary">Contratar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section bg-light">
+    <div class="container">
+      <h2>Fale Conosco</h2>
+      <form class="form-contato" id="form-contato">
+        <input type="text" name="nome" placeholder="Seu Nome" required>
+        <input type="email" name="email" placeholder="Seu Email" required>
+        <textarea name="mensagem" rows="5" placeholder="Sua Mensagem" required></textarea>
+        <button type="submit" class="btn-primary">Enviar</button>
+      </form>
+
+      <!-- Mensagem de sucesso -->
+      <p id="mensagem-sucesso">Muito obrigado, logo entraremos em contato.</p>
+
+      <!-- WhatsApp -->
+      <div class="whatsapp-contato">
+        <a href="https://wa.me/5599234565" target="_blank" style="display:flex; align-items:center; text-decoration:none; color:#0066cc;">
+          <img src="imagens/iconWapp.png" alt="WhatsApp">
+          <span style="font-size: 1rem; color:black; margin-left:5px;">+55 22 99744-3561</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 InovaWeb - Todos os direitos reservados.</p>
+      <a href="desenvolvedores.html" class="btn-footer">Desenvolvedores</a>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('form-contato');
+    const mensagem = document.getElementById('mensagem-sucesso');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // impede envio real
+
+      // Mostra a mensagem de sucesso
+      mensagem.style.display = 'block';
+
+      // Esconde após 5 segundos
+      setTimeout(() => {
+        mensagem.style.display = 'none';
+      }, 5000);
+
+      // Limpa o formulário
+      form.reset();
+    });
+
+    // MENU HAMBURGUER
+    const menuToggle = document.getElementById('menu-toggle');
+    const siteNav = document.getElementById('site-nav');
+
+    menuToggle.addEventListener('click', () => {
+      siteNav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
